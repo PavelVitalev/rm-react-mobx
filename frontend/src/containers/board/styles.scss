@@ -1,0 +1,26 @@
+@import '~assets/css/base/variables.scss';
+
+.board-wrap {
+  min-height: calc(100vh - 40px);
+  background: url('~assets/images/default-background.jpg') center;
+  background-size: cover;
+}
+
+.columns-list-wrap {
+  //padding: 0 16px;
+}
+
+.columns-wrap {
+  user-select: none;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  position: absolute;
+  top: 86px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}

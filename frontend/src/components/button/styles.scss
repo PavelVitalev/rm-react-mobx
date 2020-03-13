@@ -1,0 +1,90 @@
+@import '~assets/css/base/variables.scss';
+
+.btn {
+  @include font('Robolo-Bold', 1rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  font-weight: 700;
+  height: 32px;
+  margin: 0 4px 0 0;
+  padding: 0 8px;
+  background-color: transparentize($color-white, 0.7);
+  border-radius: 3px;
+  border: 0;
+  transition: 0.1s ease;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+  line-height: 32px;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: transparentize($color-white, 0.8);
+    box-shadow: none;
+    color: $color-white;
+  }
+
+  &:active {
+    background-color: transparentize($color-white, 0.9);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__text {
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &--width {
+    min-width: 32px;
+  }
+
+  &--black {
+    background-color: transparentize($color-black, 0.87);
+
+    &:hover {
+      background-color: transparentize($color-black, 0.77);
+    }
+  }
+
+  &--green {
+    background-color: $color-green;
+
+    &:hover {
+      background-color: transparentize($color-green, 0.1);
+    }
+  }
+
+  &--ptb8 {
+    padding: 8px 0;
+  }
+
+  &--fz14 {
+    font-size: 14px;
+  }
+
+  &--color-dark {
+    color: $color-grey-600;
+  }
+
+  &--sign {
+    margin: 0;
+    padding: 3px 8px;
+    height: auto;
+    background-color: $color-blue-600;
+
+    &:hover {
+      background-color: transparentize($color-blue-600, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

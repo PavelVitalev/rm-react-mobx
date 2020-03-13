@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-syntax-dynamic-import",
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "react-hot-loader/babel",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "@app": "./src",
+        "@containers": "./src/containers",
+        "@components": "./src/components",
+        "@assets": "./src/assets",
+        "@utils": "./src/utils",
+        "@constants": "./src/constants"
+      }
+    }]
+  ]
+}

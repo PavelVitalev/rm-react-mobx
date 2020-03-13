@@ -1,0 +1,19 @@
+@import '~assets/css/base/variables.scss';
+
+.board-users-list {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 10px;
+
+  &__user {
+    width: 28px;
+    height: 28px;
+    background: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+  }
+}

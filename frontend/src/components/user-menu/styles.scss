@@ -1,0 +1,46 @@
+@import '~assets/css/base/variables.scss';
+
+.user-menu {
+  //display: none;
+  width: 148px;
+  position: fixed;
+  top: 36px;
+  right: 0;
+  background: $color-blue-700;
+  //border-top: 1px solid white;
+  cursor: default;
+  border-bottom-left-radius: 5px;
+
+  &__list {
+    margin: 0;
+    padding: 5px;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    background-color: transparentize($color-white, 0.7);
+    color: $color-blue-800;
+    padding: 5px;
+    border-radius: 5px;
+
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+      background-color: transparentize($color-white, 0.6);
+    }
+
+    &.active {
+      color: $color-white;
+    }
+  }
+}

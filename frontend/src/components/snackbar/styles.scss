@@ -1,0 +1,25 @@
+@import '~assets/css/base/variables.scss';
+
+.snackbar-wrap {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.snackbar {
+  display: block;
+  min-width: 344px;
+  max-width: 33vw;
+  min-height: 48px;
+  margin: 24px;
+  padding: 14px 16px;
+  border-radius: 4px;
+  transform-origin: center;
+  color: transparentize($color-white, 0.3);
+  background: $color-grey-800;
+  box-shadow: 0 3px 5px -1px transparentize($color-black, 0.8), 0 6px 10px 0 transparentize($color-black, 0.86), 0 1px 18px 0 transparentize($color-black, 0.88);
+  text-align: center;
+}

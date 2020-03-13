@@ -1,0 +1,149 @@
+.btn {
+  @include font('Robolo-Bold', 1rem);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  font-weight: 700;
+  height: 32px;
+  margin: 0 4px 0 0;
+  padding: 0 8px;
+  background-color: transparentize($color-white, 0.7);
+  border-radius: 3px;
+  border: 0;
+  transition: 0.1s ease;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+  line-height: 32px;
+  white-space: nowrap;
+
+  &:focus, &:hover {
+    //background-color: transparentize($color-white, 0.8);
+    //box-shadow: none;
+    //color: $color-white;
+  }
+
+  &__text {
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &--width {
+    min-width: 32px;
+  }
+
+  &--black {
+    background-color: transparentize($color-black, 0.87);
+
+    &:hover {
+      background-color: transparentize($color-black, 0.77);
+    }
+  }
+
+  &--ptb8 {
+    padding: 8px 0;
+  }
+
+  &--fz14 {
+    font-size: 14px;
+  }
+
+  &--color-dark {
+    color: $color-grey-600;
+  }
+
+  &--sign {
+    margin: 0;
+    background-color: $color-blue-600;
+
+    &:hover {
+      background-color: transparentize($color-blue-600, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      background-color: $color-blue-600;
+    }
+  }
+}
+
+$status-colors: (
+  white: $color-white,
+  black: $color-black,
+  blue-900: $color-blue-700,
+  blue-100: $color-blue-100,
+  transparent: transparent
+);
+
+@each $status, $color in $status-colors {
+  .border {
+    &-#{$status} {
+      border-color: $color;
+    }
+
+    &-hover {
+      &-#{$status}:hover {
+        border-color: $color;
+      }
+    }
+  }
+
+  .color {
+    &-#{$status} {
+      color: $color;
+    }
+
+    &-hover {
+      &-#{$status}:hover {
+        color: $color;
+      }
+    }
+  }
+
+  .background {
+    &-#{$status} {
+      background: $color;
+    }
+
+    &-hover {
+      &-#{$status}:hover {
+        background: $color;
+      }
+    }
+  }
+}
+
+.border {
+  &-w0 {
+    border-width: 0;
+  }
+
+  &-w1 {
+    border-width: 1px;
+  }
+
+  &-w2 {
+    border-width: 2px;
+  }
+
+  &-w3 {
+    border-width: 3px;
+  }
+
+  &-w4 {
+    border-width: 4px;
+  }
+
+  &-w5 {
+    border-width: 5px;
+  }
+}
+
+.text {
+  &-underline {
+    text-decoration: underline;
+  }
+}

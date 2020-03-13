@@ -1,0 +1,15 @@
+@import '~assets/css/base/variables.scss';
+
+.delete-btn-wrap {
+  padding: 2px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  //color: $color-blue-800;
+
+  &:hover {
+    background: transparentize($color-blue-800, 0.76);
+    cursor: pointer;
+  }
+}

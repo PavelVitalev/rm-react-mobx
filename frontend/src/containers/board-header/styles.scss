@@ -1,0 +1,43 @@
+@import '~assets/css/base/variables.scss';
+
+.board-header {
+  background: transparentize($color-blue-600, 0.76);
+  padding: 8px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    border-radius: 3px;
+    //max-width: calc(100% - 24px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px 5px;
+    color: $color-white;
+    margin-right: 5px;
+
+    &:hover {
+      background: transparentize($color-blue-600, 0.76);
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    color: $color-white;
+  }
+
+  &__title-wrap {
+    display: flex;
+  }
+
+  .delete-btn-wrap {
+    display: none;
+  }
+
+  &:hover {
+    .delete-btn-wrap {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import './variables';
+
+@include font-face('Roboto-Regular', 'Roboto', '.ttf', 'truetype');
+@include font-face('Roboto-BlackItalic', 'Roboto', '.ttf', 'truetype');
+@include font-face('Roboto-Italic', 'Roboto', '.ttf', 'truetype');
+@include font-face('Roboto-Black', 'Roboto', '.ttf', 'truetype');
+@include font-face('Roboto-Thin', 'Roboto', '.ttf', 'truetype');
+
+@include font-face('Gotham-Narrow-Book', 'Gotham', '.ttf', 'truetype');
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @include font('Roboto-Regular', 1rem);
+
+  color: $color-blue-800;
+}
+
+.container-wrap {
+  width: 100%;
+  max-width: 990px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  &--pt {
+    padding-top: 32px;
+  }
+}
+
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.main-wrap {
+  padding: 0 3px;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.no-select, .no-select * {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.main-board-wrap {
+  background: url('~assets/images/default-background.jpg') center;
+  background-size: cover;
+  height: 100%;
+
+  .header {
+    background: transparentize($color-grey-500, 0.3);
+  }
+}
+
+.error {
+  color: $color-red;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: $color-blue-100;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: $color-blue-600;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}

@@ -1,0 +1,115 @@
+@import '~assets/css/base/variables.scss';
+
+.marks {
+  height: 32px;
+  position: relative;
+
+  &__list-wrap {
+    height: 100%;
+  }
+
+  &__list {
+    margin: 0;
+    height: 100%;
+    display: flex;
+  }
+
+  &-item {
+    width: 32px;
+    height: 32px;
+    max-height: 32px;
+    border-radius: 3px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--main {
+      background-color: $color-grey-200;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-grey-500;
+      }
+    }
+
+    &--green {
+      background: $mark-color-green;
+    }
+
+    &--yellow {
+      background: $mark-color-yellow;
+    }
+
+    &--orange {
+      background: $mark-color-orange;
+    }
+
+    &--red {
+      background: $mark-color-red;
+    }
+
+    &--purple {
+      background: $mark-color-purple;
+    }
+
+    &--blue {
+      background: $mark-color-blue;
+    }
+  }
+
+  .marks-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  .marks-modal-wrap {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    border-radius: 3px;
+  }
+
+  .marks-modal {
+    border: 1px solid $color-grey-200;
+    position: relative;
+    z-index: 1;
+    background: $color-white;
+    padding: 5px;
+
+    &__header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-right: 20px;
+      border-bottom: 1px solid $color-grey-200;
+
+      .delete-btn-wrap {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+
+    &__list {
+      margin-top: 5px;
+
+      .marks-item {
+        width: 100%;
+        margin-bottom: 5px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

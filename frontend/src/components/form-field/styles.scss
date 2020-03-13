@@ -1,0 +1,39 @@
+@import '~assets/css/base/variables.scss';
+
+.form-field-wrap {
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.form-field {
+  padding: 6px 12px;
+  color: #495057;
+  border: 1px solid $color-grey-500;
+  border-radius: 5px;
+  margin-bottom: 0;
+
+  &:focus {
+    outline: none;
+    border-color: transparentize($color-blue-700, 0.2);
+  }
+
+  &--error {
+    border-color: $color-red;
+
+    &::placeholder {
+      color: $color-red;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 37px;
+    color: $color-red;
+    font-size: 12px;
+    padding: 0 5px;
+
+    &--capitalize {
+      text-transform: capitalize;
+    }
+  }
+}
